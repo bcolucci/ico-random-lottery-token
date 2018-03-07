@@ -1,8 +1,8 @@
 const HelloContract = artifacts.require('./HelloContract.sol');
 
-contract('HelloEthSalon:GetMessage', accounts => {
+contract('HelloContract', accounts => {
 
-  it('should return a correct string', done => {
+  it('GetMessage should return a correct string', done => {
     HelloContract.deployed()
       .then(ctx => ctx.GetMessage.call())
       .then(res => {
