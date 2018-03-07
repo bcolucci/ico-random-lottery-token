@@ -3,5 +3,5 @@ const RandomLotteryToken = artifacts.require('./RandomLotteryToken.sol');
 
 module.exports = deployer => {
   deployer.deploy(Migrations);
-  deployer.deploy(RandomLotteryToken, 1000);
+  deployer.deploy(RandomLotteryToken, 1e+6);
 }

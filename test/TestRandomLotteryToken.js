@@ -43,7 +43,7 @@ contract('RandomLotteryToken', ([ownerAddr, aliceAddr, bobAddr]) => {
 
     const ownerBalanceAfterTransfer = web3.eth.getBalance(ownerAddr).toNumber();
 
-    // I don't fucking uderstand
+    // I don't fucking understand
     console.log(
       'before', ownerBalanceBeforeRemovingFunds,
       'after', ownerBalanceAfterTransfer,
