@@ -4,10 +4,9 @@ contract HelloContract {
 
   string message = 'Hello Ethereum Salon!';
 
-  function HelloContract() public {
-  }
+  function HelloContract() public {}
 
-  function GetMessage() public view returns (string) {
+  function getMessage() public view returns (string) {
     return message;
   }
 
