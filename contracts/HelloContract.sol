@@ -1,10 +1,10 @@
-pragma solidity ^0.4.4;
+pragma solidity ^0.4.17;
 
-contract HelloContrat {
+contract HelloContract {
 
   string message = 'Hello Ethereum Salon!';
 
-  function HelloContrat() public {
+  function HelloContract() public {
   }
 
   function GetMessage() public view returns (string) {

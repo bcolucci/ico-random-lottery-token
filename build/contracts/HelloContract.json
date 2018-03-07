@@ -1,5 +1,5 @@
 {
-  "contractName": "HelloContrat",
+  "contractName": "HelloContract",
   "abi": [
     {
       "inputs": [],
@@ -22,16 +22,16 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x60606040526040805190810160405280601581526020017f48656c6c6f20457468657265756d2053616c6f6e2100000000000000000000008152506000908051906020019061004f929190610060565b50341561005b57600080fd5b610105565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a157805160ff19168380011785556100cf565b828001600101855582156100cf579182015b828111156100ce5782518255916020019190600101906100b3565b5b5090506100dc91906100e0565b5090565b61010291905b808211156100fe5760008160009055506001016100e6565b5090565b90565b6101bc806101146000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806303e33b5314610046575b600080fd5b341561005157600080fd5b6100596100d4565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009957808201518184015260208101905061007e565b50505050905090810190601f1680156100c65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100dc61017c565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101725780601f1061014757610100808354040283529160200191610172565b820191906000526020600020905b81548152906001019060200180831161015557829003601f168201915b5050505050905090565b6020604051908101604052806000815250905600a165627a7a7230582013413cf455c8585b2d12dd0897b0bd01f932032e42db6a040290c93ca9a294aa0029",
-  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806303e33b5314610046575b600080fd5b341561005157600080fd5b6100596100d4565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009957808201518184015260208101905061007e565b50505050905090810190601f1680156100c65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100dc61017c565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101725780601f1061014757610100808354040283529160200191610172565b820191906000526020600020905b81548152906001019060200180831161015557829003601f168201915b5050505050905090565b6020604051908101604052806000815250905600a165627a7a7230582013413cf455c8585b2d12dd0897b0bd01f932032e42db6a040290c93ca9a294aa0029",
-  "sourceMap": "25:191:0:-;;;52:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;97:36;;;;;;;;25:191;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "25:191:0:-;;;;;;;;;;;;;;;;;;;;;;;;137:76;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;137:76:0;180:6;;:::i;:::-;201:7;194:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;137:76;:::o;25:191::-;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.4.4;\n\ncontract HelloContrat {\n\n  string message = 'Hello Ethereum Salon!';\n\n  function HelloContrat() public {\n  }\n\n  function GetMessage() public view returns (string) {\n    return message;\n  }\n\n}\n",
+  "bytecode": "0x60606040526040805190810160405280601581526020017f48656c6c6f20457468657265756d2053616c6f6e2100000000000000000000008152506000908051906020019061004f929190610060565b50341561005b57600080fd5b610105565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a157805160ff19168380011785556100cf565b828001600101855582156100cf579182015b828111156100ce5782518255916020019190600101906100b3565b5b5090506100dc91906100e0565b5090565b61010291905b808211156100fe5760008160009055506001016100e6565b5090565b90565b6101bc806101146000396000f300606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806303e33b5314610046575b600080fd5b341561005157600080fd5b6100596100d4565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009957808201518184015260208101905061007e565b50505050905090810190601f1680156100c65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100dc61017c565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101725780601f1061014757610100808354040283529160200191610172565b820191906000526020600020905b81548152906001019060200180831161015557829003601f168201915b5050505050905090565b6020604051908101604052806000815250905600a165627a7a72305820a61bf49aff2c2473dad91fe2966c1ac120bdbeea3e0c2e126b41ab3967aa1cc20029",
+  "deployedBytecode": "0x606060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806303e33b5314610046575b600080fd5b341561005157600080fd5b6100596100d4565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561009957808201518184015260208101905061007e565b50505050905090810190601f1680156100c65780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100dc61017c565b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101725780601f1061014757610100808354040283529160200191610172565b820191906000526020600020905b81548152906001019060200180831161015557829003601f168201915b5050505050905090565b6020604051908101604052806000815250905600a165627a7a72305820a61bf49aff2c2473dad91fe2966c1ac120bdbeea3e0c2e126b41ab3967aa1cc20029",
+  "sourceMap": "26:193:0:-;;;54:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;99:37;;;;;;;;26:193;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "26:193:0:-;;;;;;;;;;;;;;;;;;;;;;;;140:76;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:2;8:100;;;99:1;94:3;90;84:5;80:1;75:3;71;64:6;52:2;49:1;45:3;40:15;;8:100;;;12:14;3:109;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;140:76:0;183:6;;:::i;:::-;204:7;197:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;140:76;:::o;26:193::-;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.17;\n\ncontract HelloContract {\n\n  string message = 'Hello Ethereum Salon!';\n\n  function HelloContract() public {\n  }\n\n  function GetMessage() public view returns (string) {\n    return message;\n  }\n\n}\n",
   "sourcePath": "/home/brice/ico-random-lottery-token/contracts/HelloContract.sol",
   "ast": {
     "absolutePath": "/home/brice/ico-random-lottery-token/contracts/HelloContract.sol",
     "exportedSymbols": {
-      "HelloContrat": [
+      "HelloContract": [
         17
       ]
     },
@@ -44,10 +44,10 @@
           "solidity",
           "^",
           "0.4",
-          ".4"
+          ".17"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:24:0"
       },
       {
         "baseContracts": [],
@@ -59,7 +59,7 @@
         "linearizedBaseContracts": [
           17
         ],
-        "name": "HelloContrat",
+        "name": "HelloContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -68,7 +68,7 @@
             "name": "message",
             "nodeType": "VariableDeclaration",
             "scope": 17,
-            "src": "52:40:0",
+            "src": "54:40:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -79,7 +79,7 @@
               "id": 2,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "52:6:0",
+              "src": "54:6:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string storage pointer"
@@ -95,7 +95,7 @@
               "kind": "string",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "69:23:0",
+              "src": "71:23:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_dbfdf857e8b6a8fcf70b579091be014664e2e0c20442066c5e02a4e9561240e2",
@@ -109,7 +109,7 @@
             "body": {
               "id": 7,
               "nodeType": "Block",
-              "src": "128:5:0",
+              "src": "131:5:0",
               "statements": []
             },
             "id": 8,
@@ -117,23 +117,23 @@
             "isConstructor": true,
             "isDeclaredConst": false,
             "modifiers": [],
-            "name": "HelloContrat",
+            "name": "HelloContract",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 5,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "118:2:0"
+              "src": "121:2:0"
             },
             "payable": false,
             "returnParameters": {
               "id": 6,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "128:0:0"
+              "src": "131:0:0"
             },
             "scope": 17,
-            "src": "97:36:0",
+            "src": "99:37:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -142,7 +142,7 @@
             "body": {
               "id": 15,
               "nodeType": "Block",
-              "src": "188:25:0",
+              "src": "191:25:0",
               "statements": [
                 {
                   "expression": {
@@ -152,7 +152,7 @@
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 4,
-                    "src": "201:7:0",
+                    "src": "204:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
@@ -161,7 +161,7 @@
                   "functionReturnParameters": 12,
                   "id": 14,
                   "nodeType": "Return",
-                  "src": "194:14:0"
+                  "src": "197:14:0"
                 }
               ]
             },
@@ -176,7 +176,7 @@
               "id": 9,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "156:2:0"
+              "src": "159:2:0"
             },
             "payable": false,
             "returnParameters": {
@@ -189,7 +189,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 16,
-                  "src": "180:6:0",
+                  "src": "183:6:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -200,7 +200,7 @@
                     "id": 10,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "180:6:0",
+                    "src": "183:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string storage pointer"
@@ -210,25 +210,25 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "179:8:0"
+              "src": "182:8:0"
             },
             "scope": 17,
-            "src": "137:76:0",
+            "src": "140:76:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 18,
-        "src": "25:191:0"
+        "src": "26:193:0"
       }
     ],
-    "src": "0:217:0"
+    "src": "0:220:0"
   },
   "legacyAST": {
     "absolutePath": "/home/brice/ico-random-lottery-token/contracts/HelloContract.sol",
     "exportedSymbols": {
-      "HelloContrat": [
+      "HelloContract": [
         17
       ]
     },
@@ -241,10 +241,10 @@
           "solidity",
           "^",
           "0.4",
-          ".4"
+          ".17"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:0"
+        "src": "0:24:0"
       },
       {
         "baseContracts": [],
@@ -256,7 +256,7 @@
         "linearizedBaseContracts": [
           17
         ],
-        "name": "HelloContrat",
+        "name": "HelloContract",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -265,7 +265,7 @@
             "name": "message",
             "nodeType": "VariableDeclaration",
             "scope": 17,
-            "src": "52:40:0",
+            "src": "54:40:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -276,7 +276,7 @@
               "id": 2,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "52:6:0",
+              "src": "54:6:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string storage pointer"
@@ -292,7 +292,7 @@
               "kind": "string",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "69:23:0",
+              "src": "71:23:0",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_stringliteral_dbfdf857e8b6a8fcf70b579091be014664e2e0c20442066c5e02a4e9561240e2",
@@ -306,7 +306,7 @@
             "body": {
               "id": 7,
               "nodeType": "Block",
-              "src": "128:5:0",
+              "src": "131:5:0",
               "statements": []
             },
             "id": 8,
@@ -314,23 +314,23 @@
             "isConstructor": true,
             "isDeclaredConst": false,
             "modifiers": [],
-            "name": "HelloContrat",
+            "name": "HelloContract",
             "nodeType": "FunctionDefinition",
             "parameters": {
               "id": 5,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "118:2:0"
+              "src": "121:2:0"
             },
             "payable": false,
             "returnParameters": {
               "id": 6,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "128:0:0"
+              "src": "131:0:0"
             },
             "scope": 17,
-            "src": "97:36:0",
+            "src": "99:37:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -339,7 +339,7 @@
             "body": {
               "id": 15,
               "nodeType": "Block",
-              "src": "188:25:0",
+              "src": "191:25:0",
               "statements": [
                 {
                   "expression": {
@@ -349,7 +349,7 @@
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 4,
-                    "src": "201:7:0",
+                    "src": "204:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
@@ -358,7 +358,7 @@
                   "functionReturnParameters": 12,
                   "id": 14,
                   "nodeType": "Return",
-                  "src": "194:14:0"
+                  "src": "197:14:0"
                 }
               ]
             },
@@ -373,7 +373,7 @@
               "id": 9,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "156:2:0"
+              "src": "159:2:0"
             },
             "payable": false,
             "returnParameters": {
@@ -386,7 +386,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 16,
-                  "src": "180:6:0",
+                  "src": "183:6:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -397,7 +397,7 @@
                     "id": 10,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "180:6:0",
+                    "src": "183:6:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string storage pointer"
@@ -407,26 +407,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "179:8:0"
+              "src": "182:8:0"
             },
             "scope": 17,
-            "src": "137:76:0",
+            "src": "140:76:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 18,
-        "src": "25:191:0"
+        "src": "26:193:0"
       }
     ],
-    "src": "0:217:0"
+    "src": "0:220:0"
   },
   "compiler": {
     "name": "solc",
     "version": "0.4.19+commit.c4cbbb05.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1520425084501": {
+      "events": {},
+      "links": {},
+      "address": "0x8b9650b18bc78f93e825a02ad30d7507ebf137a2",
+      "transactionHash": "0xd590a5eebd387642a31f8d9878e1fa40eebafdff88abab29f7ea8f1f76500f52"
+    }
+  },
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-03-06T20:20:53.741Z"
+  "updatedAt": "2018-03-07T12:35:29.685Z"
 }
