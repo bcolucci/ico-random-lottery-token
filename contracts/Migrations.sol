@@ -1,9 +1,9 @@
-pragma solidity ^0.4.17;
+pragma solidity ^0.4.19;
 
 contract Migrations {
 
-  address public owner;
-  uint public last_completed_migration;
+  address owner;
+  uint last_completed_migration;
 
   modifier restricted() {
     if (msg.sender == owner) _;
@@ -21,5 +21,5 @@ contract Migrations {
     Migrations upgraded = Migrations(new_address);
     upgraded.setCompleted(last_completed_migration);
   }
-  
+
 }
