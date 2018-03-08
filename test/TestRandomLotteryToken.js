@@ -52,17 +52,23 @@ contract('RandomLotteryToken', ([owner, alice, bob]) => {
 
   //TODO bet
 
-  it('should remove funds', async function() {
+  it('should transfer owner balance', async function() {
     const ownerFundsBefore = fundsOf(owner);
+    const addressFundsBefore = fundsOf(await RLT.address);
     await assertNoFunds(await RLT.address);
     await RLT.sendTransaction({
       from: alice,
       value: 123,
     });
     await assertFunds(await RLT.address, 123);
-    await RLT.removeFunds.call();
+    const res = await RLT.transferBalance.call();
+    console.log(res);
     const ownerFundsAfter = fundsOf(owner);
-    console.log(ownerFundsBefore, ownerFundsAfter);
+    const addressFundsAfter = fundsOf(await RLT.address);
+    console.log(ownerFundsBefore, ownerFundsAfter, ownerFundsAfter -
+      ownerFundsBefore);
+    console.log(addressFundsBefore, addressFundsAfter,
+      addressFundsAfter - addressFundsBefore);
     //await assertNoFunds(await RLT.address);
   });
 

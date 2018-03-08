@@ -5,6 +5,8 @@ import './ICOToken.sol';
 contract RandomLotteryToken is ICOToken {
 
   mapping (address => uint256) _bets;
+  mapping (address => uint8) _todayBets;
+  mapping (address => uint8) _nbBets;
 
   function RandomLotteryToken()
     ICOToken('Random Lottery Token', 'RLT', 18, 10 ** 9, 100) public {}
@@ -15,6 +17,10 @@ contract RandomLotteryToken is ICOToken {
     require(_balances[msg.sender] >= _value);
     _bets[msg.sender] += _value;
     _balances[msg.sender] -= _value;
+    if (_todayBets[msg.sender] == 0) {
+      _todayBets[msg.sender] = 1;
+      _nbBets[msg.sender] += 1;
+    }
     return (_bets[msg.sender], _balances[msg.sender]);
   }
 
