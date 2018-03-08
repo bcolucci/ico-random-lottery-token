@@ -45,9 +45,11 @@ contract ICOToken is Owned {
   // returns the transfered tokens, the new sender balance and the new receiver balance
   function _transferTokens(address _from, address _to, uint256 _value)
     internal returns (uint256, uint256, uint256) {
+    // common checks
     require(_to != 0x0);
     require(_from != _to);
     require(_balances[_from] >= _value);
+    // move tokens between accounts
     _balances[_from] -= _value;
     _balances[_to] += _value;
     OnTokensTransfered(_from, _to, _value);
@@ -76,7 +78,9 @@ contract ICOToken is Owned {
 
   // modifier that gives RLT in exchange of ETH when receivig funds
   modifier tradable() {
+    // cannot trade 0 ETH
     require(msg.value > 0);
+    // RLT value here
     uint256 value = convert(msg.value);
     sendTokensFromOwner(msg.sender, value);
     OnFundsReceived(msg.sender, msg.value, value);
