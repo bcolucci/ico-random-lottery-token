@@ -1,68 +1,69 @@
 const RandomLotteryToken = artifacts.require('./RandomLotteryToken.sol');
 
-contract('RandomLotteryToken', ([ownerAddr, aliceAddr, bobAddr]) => {
+const fundsOf = addr => web3.eth.getBalance(addr).toNumber();
 
-  let ctx = null;
+contract('RandomLotteryToken', ([owner, alice, bob]) => {
 
+  let RLT = null;
   beforeEach('setup contract for each test', async function() {
-    ctx = await RandomLotteryToken.new(ownerAddr);
-    //console.log("ownerBalance=", web3.eth.getBalance(ownerAddr).toNumber());
-    //console.log("aliceBalance=", web3.eth.getBalance(aliceAddr).toNumber());
-    //console.log("bobBalance=", web3.eth.getBalance(bobAddr).toNumber());
+    RLT = await RandomLotteryToken.new();
   });
 
-  it('should have an owner', async function() {
-    assert.equal(await ctx.owner(), ownerAddr);
-  })
+  const strictEqual = assert.strictEqual.bind(assert);
+
+  const assertFunds = async function(addr, value) {
+    strictEqual(fundsOf(addr), value);
+  };
+
+  const assertNoFunds = async function(addr) {
+    await assertFunds(addr, 0);
+  };
+
+  const balanceOf = async function(addr) {
+    const balance = await RLT.balanceOf.call(addr);
+    return balance.toNumber();
+  };
+
+  const assertBalance = async function(addr, value) {
+    strictEqual(await balanceOf(addr), value);
+  };
+
+  it('should have an owner with no funds and initial tokens', async function() {
+    strictEqual(await RLT.owner(), owner);
+    await assertBalance(owner, 1e+9);
+    await assertNoFunds(await RLT.address);
+  });
+
+  it('should have initial accounts without any tokens', async function() {
+    await assertBalance(alice, 0);
+    await assertBalance(bob, 0);
+  });
 
   it('should accept funds', async function() {
-    const fundsAddr = await ctx.address;
-    assert.equal(web3.eth.getBalance(fundsAddr).toNumber(), 0);
-    await ctx.sendTransaction({
-      from: aliceAddr,
-      value: 1e+18,
+    await assertNoFunds(await RLT.address);
+    await RLT.sendTransaction({
+      from: alice,
+      value: 123,
     });
-    assert.equal(web3.eth.getBalance(fundsAddr).toNumber(), 1e+18);
+    await assertFunds(await RLT.address, 123);
+    await assertBalance(owner, 1e+9 - 123 * 100);
+    await assertBalance(alice, 123 * 100);
   });
 
-  it('should permit owner to receive funds', async function() {
+  //TODO bet
 
-    await ctx.sendTransaction({
-      from: aliceAddr,
-      value: 1e+18,
+  it('should remove funds', async function() {
+    const ownerFundsBefore = fundsOf(owner);
+    await assertNoFunds(await RLT.address);
+    await RLT.sendTransaction({
+      from: alice,
+      value: 123,
     });
-
-    const ownerBalanceBeforeRemovingFunds = web3.eth
-      .getBalance(ownerAddr)
-      .toNumber();
-
-    const fundsAddr = await ctx.address;
-    assert.equal(web3.eth.getBalance(fundsAddr).toNumber(), 1e+18);
-
-    await ctx.removeFunds();
-
-    const ownerBalanceAfterTransfer = web3.eth.getBalance(ownerAddr).toNumber();
-
-    // I don't fucking understand
-    console.log(
-      'before', ownerBalanceBeforeRemovingFunds,
-      'after', ownerBalanceAfterTransfer,
-      'diff', ownerBalanceAfterTransfer -
-      ownerBalanceBeforeRemovingFunds
-    );
-
-    assert.equal(web3.eth.getBalance(fundsAddr).toNumber(), 0);
-    assert.isAbove(
-      ownerBalanceAfterTransfer,
-      ownerBalanceBeforeRemovingFunds
-    );
-
-  });
-
-  it('should be able to transfer funds', async function() {
-    assert.equal(web3.eth.getBalance(bobAddr).toNumber(), 1e+20);
-    const b = await ctx.balanceOf.call(bobAddr)
-    console.log(b);
+    await assertFunds(await RLT.address, 123);
+    await RLT.removeFunds.call();
+    const ownerFundsAfter = fundsOf(owner);
+    console.log(ownerFundsBefore, ownerFundsAfter);
+    //await assertNoFunds(await RLT.address);
   });
 
 });
