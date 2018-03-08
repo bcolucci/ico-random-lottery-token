@@ -39,8 +39,17 @@ contract('RandomLotteryToken', ([owner, alice, bob]) => {
     await assertBalance(bob, 0);
   });
 
-  it('should accept funds', async function() {
+  it('should be activated', async function() {
+    assert(!(await RLT.active.call()));
+    assert((await RLT.start.call()).toNumber() > 0);
+    //TODO
+    console.log('active', (await RLT.startedAt.call()).toNumber());
+    assert(await RLT.active.call());
+  });
+
+  /*it('should accept funds', async function() {
     await assertNoFunds(await RLT.address);
+    console.log(await RLT.start.call());
     await RLT.sendTransaction({
       from: alice,
       value: 123,
@@ -48,11 +57,11 @@ contract('RandomLotteryToken', ([owner, alice, bob]) => {
     await assertFunds(await RLT.address, 123);
     await assertBalance(owner, 1e+9 - 123 * 100);
     await assertBalance(alice, 123 * 100);
-  });
+  });*/
 
   //TODO bet
 
-  it('should transfer owner balance', async function() {
+  /*it('should transfer owner balance', async function() {
     const ownerFundsBefore = fundsOf(owner);
     const addressFundsBefore = fundsOf(await RLT.address);
     await assertNoFunds(await RLT.address);
@@ -70,6 +79,6 @@ contract('RandomLotteryToken', ([owner, alice, bob]) => {
     console.log(addressFundsBefore, addressFundsAfter,
       addressFundsAfter - addressFundsBefore);
     //await assertNoFunds(await RLT.address);
-  });
+  });*/
 
 });

@@ -6,6 +6,7 @@ contract Owned {
   // contract owner
   address _owner;
 
+  // constructor
   function Owned() public { _owner = msg.sender; }
 
   function owner() public constant returns (address) { return _owner; }
